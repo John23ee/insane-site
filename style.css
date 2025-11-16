@@ -1,0 +1,14 @@
+body { margin:0; overflow:hidden; background:black; color:crimson; font-family:'Courier New',monospace; }
+#entry { text-align:center; margin-top:40vh; font-size:3em; color:crimson; animation:pulse 1s infinite; }
+@keyframes pulse { 0%,100% { opacity:1; } 50% { opacity:0.5; } }
+.apocalypse-shake { animation: apoc-shake 0.1s infinite; }
+@keyframes apoc-shake {
+  0% { transform: translate(0) rotate(0); }
+  25% { transform: translate(-20px,20px) rotate(-10deg); }
+  50% { transform: translate(20px,-20px) rotate(10deg); }
+  75% { transform: translate(-20px,-20px) rotate(-5deg); }
+  100% { transform: translate(20px,20px) rotate(5deg); }
+}
+.virus-alert, .bsod-apoc { position:fixed; inset:0; background:darkblue; color:white; text-align:center; font-size:2em; z-index:9999; display:flex; flex-direction:column; justify-content:center; }
+@keyframes blink { 0%,100% { opacity:1; } 50% { opacity:0; } }
+@keyframes flash { 0% { background:white; } 100% { background:black; } }
